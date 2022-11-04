@@ -37,6 +37,7 @@ body {
 
 header {
     margin-bottom: 3.5rem;
+    position: relative;
 }
 
 header, nav > ul {
@@ -122,7 +123,7 @@ main > div > img {
     display: flex;
     width: 100%;
     margin-right: 5rem;
-    font-size: 4rem;
+    font-size:calc(1.2rem + 3vw);
     font-weight: 800;
     color: var(--very-dark-blue);
     line-height: 1;
@@ -205,4 +206,118 @@ main > div > img {
 
 .attribution a {
     color: hsl(228, 45%, 44%); 
+}
+
+
+
+@media screen and (max-width: 1080px) {
+    body {
+
+    }
+
+    main {
+        flex-direction: column;
+    }
+    
+    .new-section {
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .news-cards {
+        flex-direction: column;
+    }
+
+    .news-card {
+        margin: 2% 0;
+    }
+    
+    .news-card > img {
+        width: 30%;
+    }
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    justify-content: space-between;
+    right: 0;
+}
+
+.main-img-mob {
+    display: none;
+}
+
+@media screen and (max-width: 869px) {
+
+    nav {
+        /* position: fixed; */
+        display: none;
+        height: 100vh;
+        /* width: 20%; */
+        z-index: 1;
+        /* background-color: white; */
+    }
+
+    .nav {
+        position: fixed;
+        z-index: 2;
+        flex-direction: column;
+        text-align: center;
+        right: 45%;
+        /* height: 100vh; */
+        /* width: ; */
+        margin: 4rem 0;
+    }
+
+    .nav-links {
+        margin: 2rem 0;
+    }
+
+
+    .menu {
+        display: flex;
+        padding: 0.5rem 0;
+    }
+
+    .main-news{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+    .main-news > div > button {
+        position: relative;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 3rem;
+    }
+
+    .main-news > h1 {
+        margin: 0;
+    }
+
+    .main-news > div > p {
+        margin-top: 1rem;
+    }
+
+    .main-img-desk {
+        display: none;
+    }
+
+    .main-img-mob {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 556px) {
+    body {
+        padding: 4% 5% 0 5%;
+    }
 }
