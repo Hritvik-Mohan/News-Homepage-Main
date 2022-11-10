@@ -14,13 +14,15 @@
   
   <title>Frontend Mentor | News homepage</title>
 
+  <script src="/assets/js/script.js" defer></script>
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body data-visible="false">
   
 
   <!-- Navbar Start -->
@@ -29,11 +31,11 @@
     
     <img class="logo" src="assets/images/logo.svg" alt="">
 
-    <img class="menu" src="assets/images/icon-menu.svg" alt="" srcset="">
-    
-    <nav>
+    <!-- <img class="menu" src="assets/images/icon-menu.svg" alt="" srcset=""> -->
+    <button class="mobile-nav-toggle"><span class="sr-only" aria-controls="primary-navigation" aria-expanded="false">Menu</span></button>
+    <nav data-visible="false">
 
-      <ul class="nav">
+      <ul id="nav" class="nav">
 
         <li class="nav-links"><a href="#">Home</a></li>
         <li class="nav-links"><a href="#">New</a></li>

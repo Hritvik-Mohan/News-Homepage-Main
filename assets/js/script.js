@@ -1,6 +1,21 @@
-const toggleButton = document.getElementsByClassName('menu')[0];
-const navbar = document.getElementsByTagName('nav')[0];
+const nav = document.querySelector("nav");
+const navToggle = document.querySelector(".mobile-nav-toggle");
 
-toggleButton.addEventListener('click', () => {
-    navbar.classList.toggle('active')
+// when someone clicks the hamburger menu
+navToggle.addEventListener("click", () => {
+    // if the menu is closed, open it
+    const visibility = nav.getAttribute("data-visible");
+    // console.log(visibility)
+    // if the menu is open, close it
+    if(visibility === "false") {
+        nav.setAttribute("data-visible", true);
+        navToggle.setAttribute("aria-expanded", true);
+    } else {
+        nav.setAttribute("data-visible", false);
+        navToggle.setAttribute("aria-expanded", false);
+    }
+
+    console.log(navToggle.getAttribute('aria-expanded'));
+
+    // console.log(visibility)
 })
