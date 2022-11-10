@@ -298,7 +298,7 @@ main > div > img {
         right: 0;
         top: 0;
         background: transparent;
-        background-image: url(/assets/images/icon-menu.svg);
+        background-image: url(../images/icon-menu.svg);
         background-repeat: no-repeat;
         background-position: center;
         width: 1.5rem;
@@ -308,7 +308,7 @@ main > div > img {
 
     .mobile-nav-toggle[aria-expanded="true"] {
         /* position: fixed; */
-        background-image: url(/assets/images/icon-menu-close.svg);
+        background-image: url(../images/icon-menu-close.svg);
     }
 
     nav[data-visible="true"] {
